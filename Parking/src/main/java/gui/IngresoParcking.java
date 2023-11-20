@@ -84,6 +84,11 @@ public class IngresoParcking extends javax.swing.JFrame {
         });
 
         btn1.setText("Aceptar");
+        btn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn1ActionPerformed(evt);
+            }
+        });
 
         btn2.setText("Limpiar");
         btn2.addActionListener(new java.awt.event.ActionListener() {
@@ -193,7 +198,7 @@ public class IngresoParcking extends javax.swing.JFrame {
 
     private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3ActionPerformed
         
-        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+                SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
                 Date horaActual = new Date();
                 String horaFormateada = sdf.format(horaActual);
                 txt2.setText(horaFormateada);
@@ -209,6 +214,14 @@ public class IngresoParcking extends javax.swing.JFrame {
         txt5.setText("");
         
     }//GEN-LAST:event_btn2ActionPerformed
+
+    private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
+        
+            FinalDatos newframe = new FinalDatos();
+            newframe.setVisible(true);
+            this.dispose();
+        
+    }//GEN-LAST:event_btn1ActionPerformed
 
     
 
